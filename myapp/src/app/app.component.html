@@ -1,24 +1,18 @@
-<div class = 'div1'>
-  <h1>Mitesh Chopra International High School</h1>
-</div>
+<app-navbar></app-navbar>
 
-<div class = 'div2'>
-  <table>
-    <tr>
-      <td>Name</td>
-      <td>Mitesh</td>
-      
-    </tr>
-    <tr>
-      <td>Age</td>
-      <td>18</td>
-      
-    </tr>
-    <tr>
-      <td>Gender</td>
-      <td>Male</td>
-      
-    </tr>
-  </table>
+<div class="container-dluid">
+  <div class="row d-flex justify-content-center">
+    <div class="col-sm-3 bg-black text-bg-primary text-center">
+      Main Body
+      <img [src]="cat" alt="">
+    </div>
+  </div>
 
-</div>
+  </div>
+
+<button type = 'button' class = 'btn btn-danger' [disabled] = 'isdisabled'>Click</button>
+<app-home></app-home>
+<button class = 'btn btn-success' (click) = 'sayhello()'> Say Hello</button>
+<app-footer></app-footer>
+
+
