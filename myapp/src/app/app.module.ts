@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { NvbarComponent } from './nvbar/nvbar.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginformComponent } from './loginform/loginform.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     NvbarComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    LoginformComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration()

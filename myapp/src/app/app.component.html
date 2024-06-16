@@ -8,11 +8,53 @@
     </div>
   </div>
 
-  </div>
+</div>
 
 <button type = 'button' class = 'btn btn-danger' [disabled] = 'isdisabled'>Click</button>
+
 <app-home></app-home>
+
 <button class = 'btn btn-success' (click) = 'sayhello()'> Say Hello</button>
+
 <app-footer></app-footer>
 
+<app-loginform></app-loginform>
+
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-6 bg-danger">
+      <img *ngIf="IsVisible" [src]="danger" alt="">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="container d-flex justify-content-center border ">
+  <div class="col-6 text-center p-1 mt-1">
+    <div *ngIf="LoggedIn; else LoggedOut">
+        <h1>You are Logged In</h1>
+    </div>
+
+    <ng-template #LoggedOut>
+      <div class ="bg-success text-center">
+        <h1>You are logged Out</h1>
+      </div>
+    </ng-template>
+  </div>
+</div>
+
+
+<h1 *ngFor="let prod of products">
+  <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Price: {{prod.price}} Rs/-</h5>
+      <p class="card-text">{{prod.name}}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</h1>
 
